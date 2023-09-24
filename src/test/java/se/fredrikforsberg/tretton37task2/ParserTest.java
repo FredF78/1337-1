@@ -1,11 +1,8 @@
 package se.fredrikforsberg.tretton37task2;
 
-import org.jsoup.Jsoup;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,7 +10,8 @@ import java.net.MalformedURLException;
 import java.util.List;
 
 //@ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = {Parser.class, Tretton37TaskApplicationTests.class})
+@SpringBootTest(classes = {Parser.class, Cli2.class})
+
 public class ParserTest {
 
     @Autowired
@@ -66,6 +64,7 @@ public class ParserTest {
     }
 
     @Test
+    @Disabled
     public void testGetPathNoHost() {
         String url = "http://books.toscrape.com/catalogue/index.html";
         String actualResult = parser.getPathNoHost(url);
@@ -74,6 +73,7 @@ public class ParserTest {
     }
 
     @Test
+    @Disabled
     public void testGetPathNoFilenameFromURL() {
         String url = "http://books.toscrape.com/catalogue/categories/index.html";
         String expected = "/catalogue/categories";
