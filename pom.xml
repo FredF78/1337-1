@@ -14,6 +14,7 @@
 	<name>tretton37-task</name>
 	<description>Test task for recruitment</description>
 	<properties>
+		<powermock.version>2.0.2</powermock.version>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -50,6 +51,13 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>32.1.2-jre</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>5.3.1</version>
+			<scope>test</scope>
 		</dependency>
 
 
